@@ -1,0 +1,14 @@
+.size {
+    background-color: var(--size);
+}
+
+.add-to-cart {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.add-to-cart:hover {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: white;
+}
