@@ -5,3 +5,11 @@ section.hero {
 .make-center {
     text-align: center;
 }
+
+.btn-primary {
+    background: var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}

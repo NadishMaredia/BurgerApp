@@ -1,0 +1,23 @@
+.go-back {
+    background: var(--primary);
+}
+
+.go-back:hover {
+    background: var(--primary-hover);
+}
+
+.cart {
+    background: var(--secondary);
+}
+
+.amount {
+    color: var(--primary);
+}
+
+.order-btn {
+    background: var(--primary);
+}
+
+.order-btn:hover {
+    background: var(--primary-hover);
+}
