@@ -2,13 +2,16 @@
 <section class="menu container mx-auto py-8 ml-16">
     <h1 class="text-xl font-bold mb-8">All Pizzas</h1>
     <div class="grid grid-cols-4 col-gap-12">
+        <span *ngFor="let item of menu?.data">
+            <app-menu-item [menu]="item"></app-menu-item>
+        </span>
+        <!-- <app-menu-item></app-menu-item>
         <app-menu-item></app-menu-item>
         <app-menu-item></app-menu-item>
         <app-menu-item></app-menu-item>
         <app-menu-item></app-menu-item>
         <app-menu-item></app-menu-item>
         <app-menu-item></app-menu-item>
-        <app-menu-item></app-menu-item>
-        <app-menu-item></app-menu-item>
+        <app-menu-item></app-menu-item> -->
     </div>
 </section>
