@@ -1,0 +1,11 @@
+.btn-login {
+    background: var(--primary);
+}
+
+.btn-login:hover {
+    background: var(--primary-hover);
+}
+
+.login-email:focus {
+    border: 2px solid var(--primary-hover)
+}

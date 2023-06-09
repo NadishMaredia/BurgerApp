@@ -1,0 +1,7 @@
+.btn-register {
+    background: var(--primary);
+}
+
+.btn-register:hover {
+    background: var(--primary-hover);
+}
