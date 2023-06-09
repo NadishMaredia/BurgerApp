@@ -1,0 +1,7 @@
+section.hero {
+    background: var(--secondary);
+}
+
+.make-center {
+    text-align: center;
+}
