@@ -7,7 +7,7 @@
             <span class="size py-1 px-4 rounded-full uppercase text-xs">{{menu.size}}</span>
             <div class="flex items-center justify-around mt-6">
                 <span class="font-bold text-lg">${{menu.prize}}</span>
-                <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold">
+                <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold" (click)="addToCart(menu)">
                     <span>+</span>
                     <span class="ml-4">Add</span>
                 </button>

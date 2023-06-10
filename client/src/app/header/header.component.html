@@ -9,7 +9,7 @@
             <li class="ml-6"><a href="#">Offer</a></li>
             <li class="ml-6"><a routerLink="register">Register</a></li>
             <li class="ml-6"><a routerLink="login">Login</a></li>
-            <li class="ml-6"><a routerLink="customer/cart" routerLinkActive="router-link-active" class="inline-block px-4 py-2 rounded-full"><img src="../../assets/cart.png" /></a></li>
+            <li class="ml-6"><a routerLink="customer/cart" routerLinkActive="router-link-active" class="flex items-center px-4 py-2 rounded-full"><span class="text-white">{{this.cartService.cartCount}}</span><img src="../../assets/cart.png" /></a></li>
         </ul>
     </div>
 </nav>

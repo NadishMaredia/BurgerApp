@@ -15,15 +15,24 @@
             <h1 class="font-bold ml-4 text-2xl">Order summary</h1>
         </div>
         <div class="pizza-list">
-            <app-cart-item></app-cart-item>
-            <app-cart-item></app-cart-item>
-            <app-cart-item></app-cart-item>
+            <span *ngFor="let item of cartItems">
+                <app-cart-item [item]="item"></app-cart-item>
+            </span>
+            
         </div>
         <hr>
         <div class="text-right py-4">
             <div>
+                <span class="text-lg font-bold">Amount:</span>
+                <span class="amount text-2xl font-bold ml-2">$ {{totalAmount}}</span>
+            </div>
+            <div>
+                <span class="text-lg font-bold">Tax:</span>
+                <span class="amount text-2xl font-bold ml-2">$ {{taxAmount}}</span>
+            </div>
+            <div>
                 <span class="text-lg font-bold">Total Amount:</span>
-                <span class="amount text-2xl font-bold ml-2">$15.99</span>
+                <span class="amount text-2xl font-bold ml-2">$ {{finalAmount}}</span>
             </div>
             <div>
                 <form action="" class="mt-12">

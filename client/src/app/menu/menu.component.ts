@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../_services/cart.service';
 import { HomeService } from '../_services/home.service';
 
 @Component({
@@ -10,10 +11,14 @@ export class MenuComponent implements OnInit {
 
   menu: any;
 
-  constructor(private homeService: HomeService) { }
+  constructor(private homeService: HomeService, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.getMenus();
+
+    this.cartService.cartCountUpdated.subscribe(count => {
+      this.cartService.cartCount = count;
+    });
   }
 
   getMenus() {

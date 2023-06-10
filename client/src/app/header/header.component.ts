@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { CartService } from '../_services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,13 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  cartCount: number = 0;
+  constructor(public cartService: CartService) { }
 
   ngOnInit(): void {
+    this.cartService.cartCountUpdated.subscribe(count => {
+      this.cartService.cartCount = count;
+    });
   }
 
 }

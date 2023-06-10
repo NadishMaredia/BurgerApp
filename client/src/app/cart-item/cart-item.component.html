@@ -2,9 +2,9 @@
 <div class="flex items-center my-8">
     <img class="w-24" src="../../assets/pizza.png" alt="">
     <div class="flex-1 ml-4">
-        <h1>Marinara</h1>
-        <span>medium</span>
+        <h1>{{item.name}}</h1>
+        <span class="uppercase">{{item.size}}</span>
     </div>
     <span class="flex-1">1 Pcs</span>
-    <span class="font-bold text-lg">$15.99</span>
+    <span class="font-bold text-lg">${{item.prize}}</span>
 </div>
