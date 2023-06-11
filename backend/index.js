@@ -16,6 +16,8 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true,})
     console.error('Error connecting to MongoDB:', error);
   });;
 
+app.use(express.json());
+
 app.use(cors());
 
 app.use(session({

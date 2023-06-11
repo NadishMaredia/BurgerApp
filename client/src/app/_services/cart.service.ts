@@ -19,15 +19,11 @@ export class CartService {
 
   addToCart(item: any) {
     const existingItem = this.cartItems.find((cartItem) => cartItem._id === item._id);
-    console.log("-----------");
-    console.log(this.cartItems);
-    console.log("-----------");
+
     if (existingItem) {
       // Item already exists, update quantity and price
       existingItem.qty += item.qty;
-      console.log(existingItem);
       // Update the price calculation logic based on your requirements
-      console.log(existingItem.prize +" * " + existingItem.qty)
       existingItem.prize = item.prize * existingItem.qty;
     } else {
       // Item does not exist, add it to the cart
@@ -48,6 +44,11 @@ export class CartService {
 
   getCartItems() {
     return this.cartItems;
+  }
+
+  clearCart() {
+    this.cartItems = [];
+    sessionStorage.removeItem('cartItems');
   }
 
 

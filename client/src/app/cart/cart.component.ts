@@ -32,4 +32,8 @@ export class CartComponent implements OnInit {
     this.finalAmount = this.totalAmount + this.taxAmount;
   }
 
+  clearCart() {
+    this.cartService.clearCart();
+  }
+
 }
